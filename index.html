@@ -2542,5 +2542,33 @@ async function raverLiveInit(){const recovering=consumeRecoverySession();await P
 setTimeout(raverLiveInit,40);
 
 </script>
+  <div class="modal" id="accessDeniedModal">
+  <div class="modal-card access-denied-card">
+    <button class="modal-close" onclick="closeAccessDeniedModal()">
+      <i class="fas fa-xmark"></i>
+    </button>
+
+    <div class="access-denied-media">
+      <video
+        id="accessDeniedVideo"
+        class="access-denied-video"
+        playsinline
+        preload="auto"
+      >
+        <source src="/assets/access-denied.mp4" type="video/mp4" />
+      </video>
+
+      <div class="access-denied-shade"></div>
+
+      <div class="access-denied-content">
+        <div class="access-denied-label">SECURITY BLOCK</div>
+        <div id="accessDeniedTyping" class="access-denied-typing"></div>
+        <div id="accessDeniedReason" class="access-denied-reason">
+          This roll number is blocked.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
